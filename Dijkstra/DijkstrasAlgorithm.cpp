@@ -5,8 +5,7 @@
 
 typedef std::vector< std::vector<int> > Matrix;
 
-void PrintSolution(int* dist, int size)
-{
+void PrintSolution(int* dist, int size) {
   	std::cout << "DISTANCES." << std::endl;
   	
 	for (int i = 0; i < size; i++) {
@@ -14,8 +13,7 @@ void PrintSolution(int* dist, int size)
 	}
 }
 
-int minDistance(int* distance, bool* visited, int size)
-{
+int minDistance(int* distance, bool* visited, int size) {
     int min = INT_MAX, min_index;
   
     for (int i = 0; i < size; i++) {
@@ -28,8 +26,7 @@ int minDistance(int* distance, bool* visited, int size)
     return min_index;
 }
 
-void DijkstraSort(Matrix& graph, int src)
-{
+void DijkstraSort(Matrix& graph, int src) {
     int distance[graph.size()];  // distance from src to i  
     bool visited[graph.size()];  // current shortest distance from src to i is finalized
   
@@ -56,8 +53,7 @@ void DijkstraSort(Matrix& graph, int src)
 	PrintSolution(distance, graph.size());
 }
 
-int main()
-{
+int main() {
 	Matrix m =	{ { 0, 1, 0, 3, 1},
 				  { 1, 0, 5, 0, 0},
               	  { 0, 5, 0, 2, 1},
